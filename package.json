@@ -12,7 +12,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "electron-dev" : "concurrently \"BROWSER=none npm run start\" \"wait-on http://localhost:3000 && electron .\""
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -28,5 +29,6 @@
     "electron": "^4.0.0",
     "electron-builder": "^20.38.4",
     "wait-on": "^3.2.0"
-  }
+  },
+  "main": "public/main.js"
 }
