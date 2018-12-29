@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^3.7.1",
+    "@material-ui/icons": "^3.0.1",
     "concurrently": "^4.1.0",
     "electron": "^4.0.0",
     "electron-builder": "^20.38.4",
