@@ -38,7 +38,7 @@ const styles = theme => ({
   },
 });
 
-function PermanentDrawerLeft(props) {
+function MenuSongPlayer(props) {
   const { classes } = props;
 
   return (
@@ -95,8 +95,8 @@ function PermanentDrawerLeft(props) {
   );
 }
 
-PermanentDrawerLeft.propTypes = {
+MenuSongPlayer.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(PermanentDrawerLeft);
+export default withStyles(styles)(MenuSongPlayer);
