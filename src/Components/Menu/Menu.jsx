@@ -12,7 +12,7 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import MusicNote from '@material-ui/icons/MusicNote'; 
-
+// import Music from './Music'
 const drawerWidth = 240;
 
 const styles = theme => ({
@@ -85,7 +85,7 @@ function MenuSongPlayer(props) {
       <main className={classes.content}>
         <div className={classes.toolbar} />
         <Typography paragraph>
-        Container1
+        {/* <Music /> */}
         </Typography>
         <Typography paragraph>
          Container
