@@ -52,10 +52,10 @@ function FullWidthGrid(props) {
       <div className={classes.details}>
         <CardContent className={classes.content}>
           <Typography component="h5" variant="h5">
-            Live From Space
+            Новая подборка , для нового дня
           </Typography>
           <Typography variant="subtitle1" color="textSecondary">
-            Mac Miller
+            Слушай кажлый день
           </Typography>
         </CardContent>
         <div className={classes.controls}>
@@ -76,16 +76,97 @@ function FullWidthGrid(props) {
         title="Live from space album cover"
       />
     </Card>
-          <Paper className={classes.paper}> <Button className={classes.button}>Слушать</Button> </Paper>
+          
         </Grid>
         <Grid item xs={6} sm={3}>
-        <Paper className={classes.paper}> <Button className={classes.button}>Слушать</Button> </Paper>
+        <Card className={classes.card}>
+      <div className={classes.details}>
+        <CardContent className={classes.content}>
+          <Typography component="h5" variant="h5">
+            Подборка за неделю
+          </Typography>
+          <Typography variant="subtitle1" color="textSecondary">
+            Слушай каждую неделю
+          </Typography>
+        </CardContent>
+        <div className={classes.controls}>
+          <IconButton aria-label="Previous">
+            {theme.direction === 'rtl' ? <SkipNextIcon /> : <SkipPreviousIcon />}
+          </IconButton>
+          <IconButton aria-label="Play/pause">
+            <PlayArrowIcon className={classes.playIcon} />
+          </IconButton>
+          <IconButton aria-label="Next">
+            {theme.direction === 'rtl' ? <SkipPreviousIcon /> : <SkipNextIcon />}
+          </IconButton>
+        </div>
+      </div>
+      <CardMedia
+        className={classes.cover}
+        image="/static/images/cards/live-from-space.jpg"
+        title="Live from space album cover"
+      />
+    </Card>
         </Grid>
         <Grid item xs={6} sm={3}>
-        <Paper className={classes.paper}> <Button className={classes.button}>Слушать</Button> </Paper>
+        <Card className={classes.card}>
+      <div className={classes.details}>
+        <CardContent className={classes.content}>
+          <Typography component="h5" variant="h5">
+          Подборка за Месяц
+          </Typography>
+          <Typography variant="subtitle1" color="textSecondary">
+            Для каждого дня
+          </Typography>
+        </CardContent>
+        <div className={classes.controls}>
+          <IconButton aria-label="Previous">
+            {theme.direction === 'rtl' ? <SkipNextIcon /> : <SkipPreviousIcon />}
+          </IconButton>
+          <IconButton aria-label="Play/pause">
+            <PlayArrowIcon className={classes.playIcon} />
+          </IconButton>
+          <IconButton aria-label="Next">
+            {theme.direction === 'rtl' ? <SkipPreviousIcon /> : <SkipNextIcon />}
+          </IconButton>
+        </div>
+      </div>
+      <CardMedia
+        className={classes.cover}
+        image="/static/images/cards/live-from-space.jpg"
+        title="Live from space album cover"
+      />
+    </Card>
         </Grid>
         <Grid item xs={6} sm={3}>
-        <Paper className={classes.paper}> <Button className={classes.button}>Слушать</Button> </Paper>
+        <Card className={classes.card}>
+      <div className={classes.details}>
+        <CardContent className={classes.content}>
+          <Typography component="h5" variant="h5">
+            Случайная подборка плей листа
+          </Typography>
+          <Typography variant="subtitle1" color="textSecondary">
+            Слушай когда захочешь
+          </Typography>
+        </CardContent>
+        <div className={classes.controls}>
+          <IconButton aria-label="Previous">
+            {theme.direction === 'rtl' ? <SkipNextIcon /> : <SkipPreviousIcon />}
+          </IconButton>
+          <IconButton aria-label="Play/pause">
+            <PlayArrowIcon className={classes.playIcon} />
+          </IconButton>
+          <IconButton aria-label="Next">
+            {theme.direction === 'rtl' ? <SkipPreviousIcon /> : <SkipNextIcon />}
+          </IconButton>
+        </div>
+      </div>
+      <CardMedia
+        className={classes.cover}
+        image="/static/images/cards/live-from-space.jpg"
+        title="Live from space album cover"
+      />
+    </Card>
         </Grid>
       </Grid>
     </div>
