@@ -1,10 +1,6 @@
-
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
-import Grid from '@material-ui/core/Grid';
-import Button from '@material-ui/core/Button';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
@@ -12,7 +8,7 @@ import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import SkipPreviousIcon from '@material-ui/icons/SkipPrevious';
 import PlayArrowIcon from '@material-ui/icons/PlayArrow';
-import SkipNextIcon from '@material-ui/icons/SkipNext';;
+import SkipNextIcon from '@material-ui/icons/SkipNext';
 
 const styles = theme => ({
   card: {
@@ -40,15 +36,11 @@ const styles = theme => ({
   },
 });
 
-
-function FullWidthGrid(props) {
+function MediaControlCard(props) {
   const { classes, theme } = props;
 
   return (
-    <div className={classes.root}>
-      <Grid container spacing={24}>    
-        <Grid item xs={6} sm={3}>
-        <Card className={classes.card}>
+    <Card className={classes.card}>
       <div className={classes.details}>
         <CardContent className={classes.content}>
           <Typography component="h5" variant="h5">
@@ -76,29 +68,12 @@ function FullWidthGrid(props) {
         title="Live from space album cover"
       />
     </Card>
-          <Paper className={classes.paper}> <Button className={classes.button}>Слушать</Button> </Paper>
-        </Grid>
-        <Grid item xs={6} sm={3}>
-        <Paper className={classes.paper}> <Button className={classes.button}>Слушать</Button> </Paper>
-        </Grid>
-        <Grid item xs={6} sm={3}>
-        <Paper className={classes.paper}> <Button className={classes.button}>Слушать</Button> </Paper>
-        </Grid>
-        <Grid item xs={6} sm={3}>
-        <Paper className={classes.paper}> <Button className={classes.button}>Слушать</Button> </Paper>
-        </Grid>
-      </Grid>
-    </div>
   );
 }
 
-FullWidthGrid.propTypes = {
+MediaControlCard.propTypes = {
   classes: PropTypes.object.isRequired,
+  theme: PropTypes.object.isRequired,
 };
 
-FullWidthGrid.propTypes = {
-    classes: PropTypes.object.isRequired,
-    theme: PropTypes.object.isRequired,
-  };
-
-export default withStyles(styles, { withTheme: true })(FullWidthGrid);
+export default withStyles(styles, { withTheme: true })(MediaControlCard);
