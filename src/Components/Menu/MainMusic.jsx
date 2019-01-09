@@ -123,8 +123,9 @@ function FullWidthGrid(props) {
           <IconButton aria-label="Previous">
             {theme.direction === 'rtl' ? <SkipNextIcon /> : <SkipPreviousIcon />}
           </IconButton>
-          <IconButton aria-label="Play/pause">
-            <PlayArrowIcon className={classes.playIcon} />
+          <IconButton  aria-label="Play/pause">
+          {/* onClick={this.toggleDrawer('bottom', true)} */}
+            <PlayArrowIcon  className={classes.playIcon} />
           </IconButton>
           <IconButton aria-label="Next">
             {theme.direction === 'rtl' ? <SkipPreviousIcon /> : <SkipNextIcon />}
