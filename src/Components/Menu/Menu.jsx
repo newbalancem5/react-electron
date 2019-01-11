@@ -12,6 +12,8 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import MusicNote from '@material-ui/icons/MusicNote'; 
+import Settings from '@material-ui/icons/Settings';
+import Exit from '@material-ui/icons/ExitToApp';
 import MainMusic from './MainMusic';
 import SearchIcon from '@material-ui/icons/Search';
 import InputBase from '@material-ui/core/InputBase';
@@ -27,6 +29,8 @@ const styles = theme => ({
   appBar: {
     width: `calc(100% - ${drawerWidth}px)`,
     marginLeft: drawerWidth,
+    // background-color: #906565,
+    
   },
   drawer: {
     width: drawerWidth,
@@ -123,14 +127,26 @@ function MenuSongPlayer(props) {
 
         <Divider />
         <List>
-          {['Music', 'YourSongs', 'Music Every Day', 'Shaffle'].map((text, index) => (
+          {['Музыка', 'Песни', 'Плейлисты', 'Понравившееся'].map((text, index) => (
             <ListItem button key={text}>
-              <ListItemIcon>{index % 2 === 0 ? <MusicNote /> : <MusicNote />}</ListItemIcon>
+              <ListItemIcon>{<MusicNote />}</ListItemIcon>
               <ListItemText primary={text} />
             </ListItem>
           ))}
         </List>
-        <Divider />        
+        
+        <Divider />     
+        <Divider />
+        <List>
+          {['Настройки', 'Выйти'].map((text, index) => (
+            <ListItem button key={text}>
+              <ListItemIcon>{index % 2 === 0 ? <Settings /> : <Exit />}</ListItemIcon>
+              <ListItemText primary={text} />
+            </ListItem>
+          ))}
+        </List>
+        
+        <Divider />     
       </Drawer>
       <main className={classes.content}>
         <div className={classes.toolbar} />
