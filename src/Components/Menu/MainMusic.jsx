@@ -62,12 +62,14 @@ function FullWidthGrid(props) {
           <IconButton aria-label="Previous">
             {theme.direction === 'rtl' ? <SkipNextIcon /> : <SkipPreviousIcon />}
           </IconButton>
-          <IconButton aria-label="Play/pause">
+          {/* <button onClick={this.toggleDrawer('bottom', true)}></button> */}
+          <IconButton aria-label="Play/pause" >
             <PlayArrowIcon className={classes.playIcon} />
           </IconButton>
           <IconButton aria-label="Next">
             {theme.direction === 'rtl' ? <SkipPreviousIcon /> : <SkipNextIcon />}
           </IconButton>
+          
         </div>
       </div>
       <CardMedia
@@ -103,7 +105,7 @@ function FullWidthGrid(props) {
       </div>
       <CardMedia
         className={classes.cover}
-        image="/static/images/cards/live-from-space.jpg"
+        color="/static/images/cards/live-from-space.jpg"
         title="Live from space album cover"
       />
     </Card>
