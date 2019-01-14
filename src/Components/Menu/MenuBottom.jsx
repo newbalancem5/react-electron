@@ -4,7 +4,11 @@ import MenuList from '@material-ui/core/MenuList';
 import MenuItem from '@material-ui/core/MenuItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import MusicNote from '@material-ui/icons/MusicNote'; 
+import SettingsIcon from '@material-ui/icons/Settings';
+import ExitIcon from '@material-ui/icons/ExitToApp';
+import {Link} from 'react-router-dom';
+
+
 
 
 function MenuBottom(props){
@@ -12,35 +16,18 @@ function MenuBottom(props){
 
      return(
 <MenuList>
-          <MenuItem>
-          <ListItemIcon>
-              <MusicNote />
-          </ListItemIcon>
-          <ListItemText insert primary="Музыка">
-          </ListItemText>
-          
+          <MenuItem component={Link} to="/Settings">
+          <ListItemIcon> 
+              <SettingsIcon /> 
+          </ListItemIcon>              
+          <ListItemText insert primary="Настройки"/>  
           </MenuItem>
-          <MenuItem>
+          <MenuItem component={Link} to="/Quit">
           <ListItemIcon>
-              <MusicNote />
+              <ExitIcon />
           </ListItemIcon>
-          <ListItemText insert primary="Песни">
-          </ListItemText>
-          </MenuItem>
-          <MenuItem>
-          <ListItemIcon>
-              <MusicNote />
-          </ListItemIcon>
-          <ListItemText insert primary="Плейлисты">
-          </ListItemText>
-          </MenuItem>
-          <MenuItem>
-          <ListItemIcon>
-              <MusicNote />
-          </ListItemIcon>
-          <ListItemText insert primary="Понравившееся">
-          </ListItemText>
-          </MenuItem>
+          <ListItemText insert primary="Выход"/>          
+          </MenuItem>          
         </MenuList>
      );
 }

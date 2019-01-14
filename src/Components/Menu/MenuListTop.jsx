@@ -16,30 +16,25 @@ function MenuTop(props){
           <ListItemIcon>
               <MusicNote />
           </ListItemIcon>
-          <ListItemText insert primary="Музыка">
-          </ListItemText>
-          
+          <ListItemText insert primary="Музыка"/> 
           </MenuItem>
           <MenuItem>
           <ListItemIcon>
               <MusicNote />
           </ListItemIcon>
-          <ListItemText insert primary="Песни">
-          </ListItemText>
+          <ListItemText insert primary="Песни"/>
           </MenuItem>
           <MenuItem>
           <ListItemIcon>
               <MusicNote />
           </ListItemIcon>
-          <ListItemText insert primary="Плейлисты">
-          </ListItemText>
+          <ListItemText insert primary="Плейлисты"/>
           </MenuItem>
           <MenuItem>
           <ListItemIcon>
               <MusicNote />
           </ListItemIcon>
-          <ListItemText insert primary="Понравившееся">
-          </ListItemText>
+          <ListItemText insert primary="Понравившееся"/>
           </MenuItem>
         </MenuList>
      );

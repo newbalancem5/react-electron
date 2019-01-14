@@ -5,24 +5,16 @@ import Drawer from '@material-ui/core/Drawer';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import List from '@material-ui/core/List';
 import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-import MusicNote from '@material-ui/icons/MusicNote'; 
-import Settings from '@material-ui/icons/Settings';
-import Exit from '@material-ui/icons/ExitToApp';
 import MainMusic from './MainMusic';
 import SearchIcon from '@material-ui/icons/Search';
 import InputBase from '@material-ui/core/InputBase';
 import { fade } from '@material-ui/core/styles/colorManipulator';
 import Player from '../Player/Player';
 // import DayMusic from './DayMusic';
-import MenuItem from '@material-ui/core/MenuItem';
-import MenuList from '@material-ui/core/MenuList';
 import MenuTop from'./MenuListTop';
+import MennuBottom from './MenuBottom';
 // import Music from './Music'
 const drawerWidth = 240;
 
@@ -129,36 +121,11 @@ function MenuSongPlayer(props) {
         <Typography>Logo</Typography>
         </div>
 
-        <Divider />
-        {/* <MenuList>
-          <MenuItem>
-          <MusicNote />
-          Музыка
-          </MenuItem>
-          <MenuItem>
-          <MusicNote />
-          Песни
-          </MenuItem>
-          <MenuItem>
-          Плейлисты
-          </MenuItem>
-          <MenuItem>
-          Понравившееся
-          </MenuItem>
-        </MenuList> */}
+        <Divider />     
         <MenuTop />     
         <Divider />     
-        <Divider />
-        
-        <List>
-          {['Настройки', 'Выйти'].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemIcon>{index % 2 === 0 ? <Settings /> : <Exit />}</ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItem>
-          ))}
-        </List>
-        
+        <Divider />        
+        < MennuBottom/>
         <Divider />     
       </Drawer>
       <main className={classes.content}>
