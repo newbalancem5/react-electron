@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import {BrowserRouter} from 'react-router-dom';
-import Menu from './Components/Menu/Menu';
+import Menu from './Menu/Menu';
+import Settings from './Setting/Settings';
 
 class App extends Component {
   render() {
     return (
    <BrowserRouter>
-      <Menu/>
+      <Menu/>   
+            
    </BrowserRouter> 
     );
   }

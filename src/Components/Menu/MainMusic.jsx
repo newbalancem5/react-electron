@@ -12,7 +12,7 @@ import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import SkipPreviousIcon from '@material-ui/icons/SkipPrevious';
 import PlayArrowIcon from '@material-ui/icons/PlayArrow';
-import SkipNextIcon from '@material-ui/icons/SkipNext';;
+import SkipNextIcon from '@material-ui/icons/SkipNext';
 
 const styles = theme => ({
   card: {
@@ -125,8 +125,7 @@ function FullWidthGrid(props) {
           <IconButton aria-label="Previous">
             {theme.direction === 'rtl' ? <SkipNextIcon /> : <SkipPreviousIcon />}
           </IconButton>
-          <IconButton  aria-label="Play/pause">
-          {/* onClick={this.toggleDrawer('bottom', true)} */}
+          <IconButton  aria-label="Play/pause">         
             <PlayArrowIcon  className={classes.playIcon} />
           </IconButton>
           <IconButton aria-label="Next">

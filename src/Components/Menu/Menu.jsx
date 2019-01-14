@@ -15,6 +15,8 @@ import Player from '../Player/Player';
 // import DayMusic from './DayMusic';
 import MenuTop from'./MenuListTop';
 import MennuBottom from './MenuBottom';
+import {Route} from 'react-router-dom';
+import Settings from '../Setting/Settings';
 // import Music from './Music'
 const drawerWidth = 240;
 
@@ -131,6 +133,7 @@ function MenuSongPlayer(props) {
       <main className={classes.content}>
         <div className={classes.toolbar} />
         <Typography paragraph>
+        <Route path='/Settings' component={Settings}/>
         <MainMusic/>
         </Typography>
         <Typography paragraph>

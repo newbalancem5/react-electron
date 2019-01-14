@@ -6,29 +6,35 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import SettingsIcon from '@material-ui/icons/Settings';
 import ExitIcon from '@material-ui/icons/ExitToApp';
-import {Link} from 'react-router-dom';
+import {Link,Route} from 'react-router-dom';
+ import Settings from '../Setting/Settings';
 
 
 
 
-function MenuBottom(props){
+function MenuBottom(props, router){
      const {classes} = props;
 
-     return(
-<MenuList>
-          <MenuItem component={Link} to="/Settings">
-          <ListItemIcon> 
-              <SettingsIcon /> 
-          </ListItemIcon>              
-          <ListItemText insert primary="Настройки"/>  
-          </MenuItem>
-          <MenuItem component={Link} to="/Quit">
-          <ListItemIcon>
-              <ExitIcon />
+     return(       
+
+             <MenuList>
+         <MenuItem 
+         component={Link} 
+         to="/Settings">
+         {<ListItemIcon>
+          <SettingsIcon />
           </ListItemIcon>
-          <ListItemText insert primary="Выход"/>          
-          </MenuItem>          
-        </MenuList>
+         }                          
+         <ListItemText insert primary="Настройки"/>          
+         </MenuItem>
+         <MenuItem component={Link} to="/Quit">
+         <ListItemIcon>
+             <ExitIcon />
+         </ListItemIcon>
+         <ListItemText insert primary="Выход"/>          
+         </MenuItem>          
+       </MenuList>        
+
      );
 }
 MenuBottom.propTypes = {
