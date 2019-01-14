@@ -6,8 +6,8 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import SettingsIcon from '@material-ui/icons/Settings';
 import ExitIcon from '@material-ui/icons/ExitToApp';
-import {Link,Route} from 'react-router-dom';
- import Settings from '../Setting/Settings';
+import {Link} from 'react-router-dom';
+
 
 
 
