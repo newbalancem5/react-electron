@@ -22,6 +22,7 @@ import Player from '../Player/Player';
 // import DayMusic from './DayMusic';
 import MenuItem from '@material-ui/core/MenuItem';
 import MenuList from '@material-ui/core/MenuList';
+import MenuTop from'./MenuListTop';
 // import Music from './Music'
 const drawerWidth = 240;
 
@@ -129,7 +130,7 @@ function MenuSongPlayer(props) {
         </div>
 
         <Divider />
-        <MenuList>
+        {/* <MenuList>
           <MenuItem>
           <MusicNote />
           Музыка
@@ -144,17 +145,8 @@ function MenuSongPlayer(props) {
           <MenuItem>
           Понравившееся
           </MenuItem>
-        </MenuList>
-        
-        {/* <List>
-          {['Музыка', 'Песни', 'Плейлисты', 'Понравившееся'].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemIcon>{<MusicNote />}</ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItem>
-          ))}
-        </List> */}
-        
+        </MenuList> */}
+        <MenuTop />     
         <Divider />     
         <Divider />
         
