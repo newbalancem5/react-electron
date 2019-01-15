@@ -5,17 +5,21 @@ import MenuItem from '@material-ui/core/MenuItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import MusicNote from '@material-ui/icons/MusicNote'; 
-
+import {Link} from 'react-router-dom';
+ 
 
 function MenuTop(props){
      const {classes} = props;
 
      return(
 <MenuList>
-          <MenuItem>
-          <ListItemIcon>
-              <MusicNote />
-          </ListItemIcon>
+          <MenuItem
+           component={Link} 
+           to="/">
+           {<ListItemIcon>
+            <MusicNote />
+        </ListItemIcon>}
+          
           <ListItemText insert primary="Музыка"/> 
           </MenuItem>
           <MenuItem>
