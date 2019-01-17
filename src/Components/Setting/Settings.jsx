@@ -1,108 +1,258 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
+import red from '@material-ui/core/colors/red';
+import FormGroup from '@material-ui/core/FormGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Switch from '@material-ui/core/Switch';
+import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
+import Divider from '@material-ui/core/Divider';
+import Fab from '@material-ui/core/Fab';
+import NavigationIcon from '@material-ui/icons/Add';
 
 const styles = theme => ({
-  root: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    minWidth: 300,
-    width: '100%',
-  },
-  image: {
-    position: 'relative',
-    height: 200,
-    [theme.breakpoints.down('xs')]: {
-      width: '100% !important', // Overrides inline-style
-      height: 100,
-    },
-    '&:hover, &$focusVisible': {
-      zIndex: 1,
-      '& $imageBackdrop': {
-        opacity: 0.15,
-      },
-      '& $imageMarked': {
-        opacity: 0,
-      },
-      '& $imageTitle': {
-        border: '4px solid currentColor',
+  colorSwitchBase: {
+    color: red,
+    '&$colorChecked': {
+      color: red[400],
+      '& + $colorBar': {
+        backgroundColor: red[100],
       },
     },
   },
-  focusVisible: {},
-  imageButton: {
-    position: 'absolute',
-    left: 0,
-    right: 0,
-    top: 0,
-    bottom: 0,
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    color: theme.palette.common.white,
+  colorBar: {},
+  colorChecked: {},
+  iOSSwitchBase: {
+    '&$iOSChecked': {
+      color: theme.palette.common.white,
+      '& + $iOSBar': {
+        backgroundColor: '#52d869',
+      },
+    },
+    transition: theme.transitions.create('transform', {
+      duration: theme.transitions.duration.shortest,
+      easing: theme.transitions.easing.sharp,
+    }),
   },
-  imageSrc: {
-    position: 'absolute',
-    left: 0,
-    right: 0,
-    top: 0,
-    bottom: 0,
-    backgroundSize: 'cover',
-    backgroundPosition: 'center 40%',
-  },
-  imageBackdrop: {
-    position: 'absolute',
-    left: 0,
-    right: 0,
-    top: 0,
-    bottom: 0,
-    backgroundColor: theme.palette.common.black,
-    opacity: 0.4,
-    transition: theme.transitions.create('opacity'),
-  },
-  imageTitle: {
-    position: 'relative',
-    padding: `${theme.spacing.unit * 2}px ${theme.spacing.unit * 4}px ${theme.spacing.unit + 6}px`,
-  },
-  imageMarked: {
-    height: 3,
-    width: 18,
-    backgroundColor: theme.palette.common.white,
-    position: 'absolute',
-    bottom: -2,
-    left: 'calc(50% - 9px)',
-    transition: theme.transitions.create('opacity'),
+  divider: {
+    margin: `${theme.spacing.unit * 2}px 0`,
+  },  
+  container: {
+    display: 'grid',
+    gridTemplateColumns: 'repeat(12, 1fr)',
+    gridGap: `${theme.spacing.unit * 3}px`,
   },
 });
 
+class Setting extends React.Component {
+  state = {
+    checkedA: true,
+    checkedB: true,
+  };
 
+  handleChange = name => event => {
+    this.setState({ [name]: event.target.checked });
+  };
 
-function Settings(props) {
-  const { classes } = props;
-
-  return (
-  
-    <div className={classes.root}>
+  render() {
+    const { classes } = this.props;
     
-  <FormControlLabel
-    control={
-      <Switch
-        // checked={}
-        // onChange={this.handleHiddenChange}
-        value="hidden"
-        color="primary"
-      />
-    }
-    label="Включить"
-  />     
-    </div>
-  );
+    return (
+      <div>      
+        <Grid
+         item xs={12}         
+  container
+  direction="column"
+  justify="flex-end"
+  alignItems="center">
+        <Typography 
+        component="h2"        
+        variant="h3" gutterCenter>
+        Настройки
+      </Typography>
+        </Grid>
+        <Grid container spacing={40}>
+        <Grid item xs={3}>
+        <Typography variant="subtitle1" gutterBottom>
+            Высокое качество:
+          </Typography> 
+        </Grid>
+        <Grid item xs={3}>
+        <FormGroup row>      
+      <FormControlLabel
+        control={           
+          <Switch
+            checked={this.state.checkedA}
+            onChange={this.handleChange('checkedA')}
+            value="checkedA"
+            classes={{
+              switchBase: classes.colorSwitchBase,
+              checked: classes.colorChecked,
+              bar: classes.colorBar,
+            }}
+          />            
+        }
+        label="Включить"
+      />        
+    </FormGroup>
+        </Grid>  
+        </Grid>
+        <Divider className={classes.divider} />  
+        <Grid container spacing={24}>
+        <Grid item xs={3}>
+        <Typography variant="subtitle1" gutterBottom>
+            Ночная тема:
+          </Typography> 
+        </Grid>
+        <Grid item xs={3}>
+        <FormGroup row>      
+      <FormControlLabel
+        control={           
+          <Switch
+            checked={this.state.checkedHighQuality}
+            onChange={this.handleChange('checkedHighQuality')}
+            value="checkedHighQuality"
+            classes={{
+              switchBase: classes.colorSwitchBase,
+              checked: classes.colorChecked,
+              bar: classes.colorBar,
+            }}
+          />            
+        }
+        label="Включить"
+      />        
+    </FormGroup>
+        </Grid>
+        </Grid>
+        <Divider className={classes.divider} />  
+        <Grid container spacing={24}>
+        <Grid item xs={3}>
+        <Typography variant="subtitle1" gutterBottom>
+            Ставить стандартный уровень громкости:
+          </Typography> 
+        </Grid>
+        <Grid item xs={3}>
+        <FormGroup row>      
+      <FormControlLabel
+        control={           
+          <Switch
+            checked={this.state.checkedHighQuality}
+            onChange={this.handleChange('checkedHighQuality')}
+            value="checkedHighQuality"
+            classes={{
+              switchBase: classes.colorSwitchBase,
+              checked: classes.colorChecked,
+              bar: classes.colorBar,
+            }}
+          />            
+        }
+        label="Включить"
+      />        
+    </FormGroup>
+        </Grid>
+        </Grid>
+        <Divider className={classes.divider} />  
+        <Grid container wrap="nowrap" spacing={24}>
+         <Grid item xs={3}>
+        <Typography variant="subtitle1" gutterBottom>
+            Автоматически составлять новый плейлист:
+          </Typography> 
+        </Grid>
+        <Grid item xs={3}>
+        <FormGroup row>      
+      <FormControlLabel
+        control={           
+          <Switch
+            checked={this.state.checkedHighQuality}
+            onChange={this.handleChange('checkedHighQuality')}
+            value="checkedHighQuality"
+            classes={{
+              switchBase: classes.colorSwitchBase,
+              checked: classes.colorChecked,
+              bar: classes.colorBar,
+            }}
+          />            
+        }
+        label="Включить"
+      />        
+    </FormGroup>
+        </Grid> 
+         </Grid>  
+         <Divider className={classes.divider} />  
+         <Grid container wrap="nowrap" spacing={24}>
+         <Grid item xs={3}>
+        <Typography variant="subtitle1" gutterBottom>
+            Приватная сессия
+          </Typography> 
+        </Grid>
+        <Grid item xs={3}>
+        <FormGroup row>      
+      <FormControlLabel
+        control={           
+          <Switch
+            checked={this.state.checkedHighQuality}
+            onChange={this.handleChange('checkedHighQuality')}
+            value="checkedHighQuality"
+            classes={{
+              switchBase: classes.colorSwitchBase,
+              checked: classes.colorChecked,
+              bar: classes.colorBar,
+            }}
+          />            
+        }
+        label="Включить"
+      />        
+    </FormGroup>
+        </Grid> 
+         </Grid> 
+         <Divider className={classes.divider} />  
+         <Grid container wrap="nowrap" spacing={24}>
+         <Grid item xs={3}>
+        <Typography variant="subtitle1" gutterBottom>
+            Показывать моих любимых исполнителей:
+          </Typography> 
+        </Grid>
+        <Grid item xs={3}>
+        <FormGroup row>      
+      <FormControlLabel
+        control={           
+          <Switch
+            checked={this.state.checkedHighQuality}
+            onChange={this.handleChange('checkedHighQuality')}
+            value="checkedHighQuality"
+            classes={{
+              switchBase: classes.colorSwitchBase,
+              checked: classes.colorChecked,
+              bar: classes.colorBar,
+            }}
+          />            
+        }
+        label="Включить"
+      />        
+    </FormGroup>
+        </Grid> 
+         </Grid> 
+         <Grid
+          container wrap="nowrap"
+          
+  direction="column"
+  justify="flex-end"
+  alignItems="center"
+           spacing={24}>
+         <Fab variant="extended" color="red" aria-label="Add" className={classes.margin}>
+<NavigationIcon className={classes.extendedIcon} />
+Сохранить
+</Fab> 
+         </Grid>
+        </div>         
+     
+    );
+  }
 }
 
-Settings.propTypes = {
+Setting.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(Settings);
+export default withStyles(styles)(Setting);
