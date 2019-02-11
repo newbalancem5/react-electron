@@ -8,7 +8,7 @@ import MusicNote from '@material-ui/icons/MusicNote';
 import {Link} from 'react-router-dom';
  
 
-function MenuTop(props){
+function MenuTop(props, router){
 
      return(
 <MenuList>
@@ -21,13 +21,19 @@ function MenuTop(props){
           
           <ListItemText insert primary="Музыка"/> 
           </MenuItem>
-          <MenuItem>
+          <MenuItem
+          component={Link}
+          to="/Song"
+          >
           <ListItemIcon>
               <MusicNote />
           </ListItemIcon>
           <ListItemText insert primary="Песни"/>
           </MenuItem>
-          <MenuItem>
+          <MenuItem
+          component={Link}
+          to="/NewPLaylist"
+          >
           <ListItemIcon>
               <MusicNote />
           </ListItemIcon>
