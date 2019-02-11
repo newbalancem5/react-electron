@@ -9,7 +9,6 @@ import {Link} from 'react-router-dom';
  
 
 function MenuTop(props){
-     const {classes} = props;
 
      return(
 <MenuList>

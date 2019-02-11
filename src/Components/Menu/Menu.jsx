@@ -11,7 +11,7 @@ import MainMusic from './MainMusic';
 import SearchIcon from '@material-ui/icons/Search';
 import InputBase from '@material-ui/core/InputBase';
 import { fade } from '@material-ui/core/styles/colorManipulator';
-import Player from '../Player/Player';
+//import Player from '../Player/Player';
 // import DayMusic from './DayMusic';
 import MenuTop from'./MenuListTop';
 import MennuBottom from './MenuBottom';
