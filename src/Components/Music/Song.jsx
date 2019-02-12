@@ -4,6 +4,33 @@ import { withStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 
+
+const styles = theme => ({
+  card: {
+    display: 'flex',
+  },
+  details: {
+    display: 'flex',
+    flexDirection: 'column',
+  },
+  content: {
+    flex: '1 0 auto',
+  },
+  cover: {
+    width: 151,
+  },
+  controls: {
+    display: 'flex',
+    alignItems: 'center',
+    paddingLeft: theme.spacing.unit,
+    paddingBottom: theme.spacing.unit,
+  },
+  playIcon: {
+    height: 38,
+    width: 38,
+  },
+});
+
 function Song(props){
     const {classes} = props;
 
@@ -40,4 +67,4 @@ Song.propTypes = {
     classes: PropTypes.object.isRequired,
   };
 
-export default withStyles (Song); 
+export default withStyles(styles) (Song); 
