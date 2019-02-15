@@ -39,7 +39,10 @@ function MenuTop(props, router){
           </ListItemIcon>
           <ListItemText insert primary="Плейлисты"/>
           </MenuItem>
-          <MenuItem>
+          <MenuItem
+          component = {Link}
+          to = "/LikeSong"
+          >
           <ListItemIcon>
               <MusicNote />
           </ListItemIcon>

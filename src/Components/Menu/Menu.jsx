@@ -19,6 +19,7 @@ import {Route, Switch} from 'react-router-dom';
 import Settings from '../Setting/Settings';
 import NewPlaylis from '../Music/NewPlaylist';
 import Song from '../Music/Song';
+import LikeSong from '../Music/LikeSong'
 
 // import Music from './Music'
 const drawerWidth = 240;
@@ -139,6 +140,7 @@ function MenuSongPlayer(props) {
         <Switch>
         {/* <Route path='/NewPlaylist' component={Newplaylist}>  */}
         <Route path='/Index' />
+        <Route path='/Likesong' component={LikeSong}/>
         <Route path='/Song' component={Song}/>
         <Route path ='/NewPlaylist' component={NewPlaylis}/>
         <Route path='/Settings' component={Settings}/>
