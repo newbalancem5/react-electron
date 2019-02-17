@@ -7,7 +7,7 @@ import Typography from '@material-ui/core/Typography';
 import Card from '@material-ui/core/Card';
 import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
-import IconButton from '@material-ui/icons/Button';
+import IconButton from '@material-ui/core/IconButton';
 import PlayArrowIcon from '@material-ui/icons/PlayArrow';
 import SkipNextIcon from '@material-ui/icons/SkipNext';
 import SkipPreviousIcon from '@material-ui/icons/SkipPrevious';
@@ -108,7 +108,7 @@ LikeSong.propTypes = {
     theme: PropTypes.object.isRequired,
   };
 
-export default withStyles(styles) (LikeSong); 
+export default withStyles(styles, { withTheme: true }) (LikeSong); 
 
 
 
