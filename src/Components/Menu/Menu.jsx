@@ -31,7 +31,7 @@ const styles = theme => ({
   appBar: {
     width: `calc(100% - ${drawerWidth}px)`,
     marginLeft: drawerWidth,
-    // background-color: #906565,
+    backgroundColor: '#e57373',
     
   },
   drawer: {
