@@ -69,7 +69,6 @@ function MusicPanel(props) {
       </div>
       <CardMedia
         className={classes.cover}
-        color = "#4828"
         title="Live from space album cover"
         image = '../src/images/live-from-space.jpg'
       />
