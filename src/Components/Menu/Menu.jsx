@@ -17,7 +17,7 @@ import Settings from '../Setting/Settings';
 import NewPlaylis from '../Music/NewPlaylist';
 import Song from '../Music/Song';
 import LikeSong from '../Music/LikeSong'
-import MenuSearchBar from './MenuSearchBar.tsx';
+// import MenuSearchBar from './MenuSearchBar';
 
 // import Music from './Music'
 const drawerWidth = 240;
@@ -58,7 +58,7 @@ function MenuSongPlayer(props) {
           <Typography variant="h6" color="inherit" noWrap>
             ReactElectronMusic
           </Typography>
-           <MenuSearchBar/>
+           {/* <MenuSearchBar/> */}
         </Toolbar>        
       </AppBar>
       <Drawer
