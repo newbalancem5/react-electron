@@ -22,7 +22,7 @@ const styles = (theme: Theme) =>
       width: '100%',
       [theme.breakpoints.up('sm')]: {
         marginLeft: theme.spacing.unit * 3,
-        width: 'auto',
+        width: '40%',
       },
     },
     searchIcon: {
@@ -51,22 +51,10 @@ const styles = (theme: Theme) =>
     },
   });
 
-export interface Props extends WithStyles<typeof styles> {}
-
-interface State {
-  anchorEl: null | HTMLElement;
-  mobileMoreAnchorEl: null | HTMLElement;
-}
-
-class MenuSearchBar extends React.Component<Props, State> {
-  state: State = {
-    anchorEl: null,
-    mobileMoreAnchorEl: null,
-  };
 
 
+class MenuSearchBar extends React.Component<props> {
   render() {
-    const { anchorEl, mobileMoreAnchorEl } = this.state;
     const { classes } = this.props;
     return (
       <div className={classes.root}> 
@@ -75,7 +63,7 @@ class MenuSearchBar extends React.Component<Props, State> {
                 <SearchIcon />
               </div>
               <InputBase
-                placeholder="Search…"
+                placeholder="Поиск...."
                 classes={{
                   root: classes.inputRoot,
                   input: classes.inputInput,
