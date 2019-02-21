@@ -8,11 +8,9 @@ class App extends Component {
   render() {
     return (
    <BrowserRouter>
-      <Menu/>   
-            
+      <Menu/>
    </BrowserRouter> 
     );
   }
 }
-
 export default App;
