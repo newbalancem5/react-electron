@@ -27,7 +27,8 @@ function MenuBottom(props, router){
          }                          
          <ListItemText insert primary="Настройки"/>          
          </MenuItem>
-         <MenuItem component={Link} to="/Quit">
+         <MenuItem component={Link}
+          to="/NotFound">
          <ListItemIcon>
              <ExitIcon />
          </ListItemIcon>

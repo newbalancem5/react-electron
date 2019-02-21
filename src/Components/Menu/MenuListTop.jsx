@@ -23,7 +23,7 @@ function MenuTop(props, router){
           </MenuItem>
           <MenuItem
           component={Link}
-          to="/Song"
+          to="/NotFound"
           >
           <ListItemIcon>
               <MusicNote />
@@ -32,7 +32,7 @@ function MenuTop(props, router){
           </MenuItem>
           <MenuItem
           component={Link}
-          to="/NewPLaylist"
+          to="/NotFound"
           >
           <ListItemIcon>
               <MusicNote />

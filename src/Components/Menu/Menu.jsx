@@ -17,7 +17,8 @@ import Settings from '../Setting/Settings';
 import NewPlaylis from '../Music/NewPlaylist';
 import Song from '../Music/Song';
 import LikeSong from '../Music/LikeSong'
-// import MenuSearchBar from './MenuSearchBar';
+import MenuSearchBar from '../Nav/MenuSearchBar';
+import NotFound from '../NotFounds/NotFound';
 
 // import Music from './Music'
 const drawerWidth = 240;
@@ -58,7 +59,7 @@ function MenuSongPlayer(props) {
           <Typography variant="h6" color="inherit" noWrap>
             ReactElectronMusic
           </Typography>
-           {/* <MenuSearchBar/> */}
+          <MenuSearchBar/> 
         </Toolbar>        
       </AppBar>
       <Drawer
@@ -90,6 +91,7 @@ function MenuSongPlayer(props) {
         <Route path='/Song' component={Song}/>
         <Route path ='/NewPlaylist' component={NewPlaylis}/>
         <Route path='/Settings' component={Settings}/>
+        <Route path='/NotFound' component={NotFound}/> 
         <MainMusic/>
         </Switch>
         </Typography>
